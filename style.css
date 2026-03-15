@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+body { 
+    margin: 0;
+    height: 100vh;
+    padding-top: 7.5vh;
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.terminal-window {
+    min-width: 75%;
+    max-width: 900px;
+    height: 85%;
+    border: solid 2px #404040;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-navbar {
+    background: #262626;
+    font-size: 0.9rem;
+    height: 6.25%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+}
+
+.left-nav {
+    background-color: black;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 8px 8px 0 0;
+    padding: 0.5rem 9rem 2rem 0.75rem;
+}
+
+.terminal-body {
+    background: black;
+    flex: 1;
+    border-radius: 0 0 8px 8px;
+}
+
+.output {
+    margin-left: 6px;
+    padding-top: 12px;;
+}
+
+.terminal-line {
+    display: flex;
+}
+
+.input-wrapper {
+    display: flex;
+    margin-left: 5px;
+}
+
+.typed-text {
+    margin-left: 6px;
+}
+
+#hidden {
+    position: absolute;
+    opacity: 0;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: white;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
