@@ -18,24 +18,34 @@
         </div>
 
         <div class="terminal-body">
-            <div class="output">
+            <span class="top-space"></span>
+
+            <div id="terminal-output" class="output">
                 <p>Welcome to lshell, a portfolio for Logan Caraway</p>
                 <br>
-                <p>Type 'help' for a list of commands</p>
+                <p>Type <span style="color: #FCEEA7">'help'</span> for a list of commands</p>
                 <br>
-
+                <!--more lines will be appended (or removed entirely) depending on user commands-->
+                
+            </div>
+            
+            <div id="line">
                 <div class="terminal-line">
-                    <span class="prompt">guest@lshell:~$</span>
+                    <span id="prompt">guest@lshell:~$</span>
                     
                     <span class="input-wrapper">
-                        <span id="typed-text">input</span>
+                        <span id="typed-text"></span>
                         <span class="cursor"></span>
                     </span>
                     
-                    <input id=hidden type="text" autofocus>
-                </div>                
+                    <input id="hidden" type="text" autofocus autocomplete="off">
+                </div>
             </div>
+
+            <div id="scroll-anchor"></div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
