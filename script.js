@@ -157,10 +157,21 @@ function genContact() {
 function genProjects() {
     terminalContent.appendChild(document.createElement("br"));
 
-    const p = document.createElement("p");
-    p.textContent = "Currently, I am working on a web application to help Pokemon draft league players prepare for matches.";
+    const p1 = document.createElement("p");
+    p1.textContent = "Currently, I am working on a web application to help Pokemon draft league players prepare for matches.";
+    terminalContent.appendChild(p1);
     terminalContent.appendChild(document.createElement("br"));
 
+    const p2 = document.createElement("p");
+    const link1 = document.createElement("a");
+    link1.textContent = "https://github.com/logannick02/pokeprep/blob/main/README.md";
+    link1.href = "https://github.com/logannick02/pokeprep/blob/main/README.md";
+    link1.style.color = "inherit"; 
+    link1.style.textDecoration = "underline";
+
+    p2.appendChild(link1);
+    terminalContent.appendChild(p2);
+    terminalContent.appendChild(document.createElement("br"));
 }
 
 function genResume() {
