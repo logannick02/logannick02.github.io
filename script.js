@@ -166,7 +166,7 @@ function genProjects() {
 
     const p2 = document.createElement("p");
     const link1 = document.createElement("a");
-    link1.textContent = "https://github.com/logannick02/pokeprep/blob/main/README.md";
+    link1.textContent = "https://github.com/logannick02/pokeprep/";
     link1.href = "https://github.com/logannick02/pokeprep/blob/main/README.md";
     link1.style.color = "inherit"; 
     link1.style.textDecoration = "underline";
