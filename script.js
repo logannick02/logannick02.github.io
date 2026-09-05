@@ -162,22 +162,37 @@ function genContact() {
 
 
 function genProjects() {
-    terminalContent.appendChild(document.createElement("br"));
+    projectsText.forEach(line => {
+        if (line === "br") {
+            terminalContent.appendChild(document.createElement("br"));
+        } else {
+            const p = document.createElement("p");
+            p.textContent = line;
 
-    const p1 = document.createElement("p");
-    p1.textContent = "Currently, I am working on a web application to help Pokemon draft league players prepare for matches.";
-    terminalContent.appendChild(p1);
-    terminalContent.appendChild(document.createElement("br"));
+            if (line === "Poople:" || line === "PokePrep:") {
+                p.classList.add("green");
+            }
 
-    const p2 = document.createElement("p");
-    const link1 = document.createElement("a");
-    link1.textContent = "https://github.com/logannick02/pokeprep/";
-    link1.href = "https://github.com/logannick02/pokeprep/blob/main/README.md";
-    link1.style.color = "inherit"; 
-    link1.style.textDecoration = "underline";
+            terminalContent.appendChild(p);
+        }
+    });
 
-    p2.appendChild(link1);
-    terminalContent.appendChild(p2);
+    const ul = document.createElement("ul");
+
+    // PokePrep GitHub
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+
+    link.textContent = "PokePrep - GitHub";
+    link.href = "https://github.com/logannick02/pokeprep/";
+    link.target = "_blank";
+    link.style.color = "inherit";
+    link.style.textDecoration = "underline";
+
+    li.appendChild(link);
+    ul.appendChild(li);
+
+    terminalContent.appendChild(ul);
     terminalContent.appendChild(document.createElement("br"));
 }
 
