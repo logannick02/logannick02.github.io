@@ -66,15 +66,6 @@ const resumeTextThree = [
     "https://youtu.be/neo8tPp__Lg",
 ];
 
-const projectsText = [
-    "br",
-    "Poople: https://lcaraway-poople.vercel.app/",
-    "A Wordle-style web game that I am recreating with the intention of improving the mobile experience",
-    "br",
-    "PokePrep:",
-    "A full-stack web application to help Pokemon draft league players prepare for matches."
-];
-
 function scrollToBottom() {
     // document.getElementById("scroll-anchor").scrollIntoView({behavior: "instant"});
     const terminal = document.querySelector(".terminal-body");
@@ -162,37 +153,56 @@ function genContact() {
 
 
 function genProjects() {
-    projectsText.forEach(line => {
-        if (line === "br") {
-            terminalContent.appendChild(document.createElement("br"));
-        } else {
-            const p = document.createElement("p");
-            p.textContent = line;
+    terminalContent.appendChild(document.createElement("br"));
 
-            if (line === "Poople:" || line === "PokePrep:") {
-                p.classList.add("green");
-            }
+    // Poople
+    const poople = document.createElement("p");
 
-            terminalContent.appendChild(p);
-        }
-    });
+    const poopleTitle = document.createElement("span");
+    poopleTitle.textContent = "Poople: ";
+    poopleTitle.classList.add("green");
 
-    const ul = document.createElement("ul");
+    const poopleLink = document.createElement("a");
+    poopleLink.textContent = "https://lcaraway-poople.vercel.app/";
+    poopleLink.href = "https://lcaraway-poople.vercel.app/";
+    poopleLink.target = "_blank";
+    poopleLink.style.color = "inherit";
+    poopleLink.style.textDecoration = "underline";
 
-    // PokePrep GitHub
-    const li = document.createElement("li");
-    const link = document.createElement("a");
+    poople.appendChild(poopleTitle);
+    poople.appendChild(poopleLink);
+    terminalContent.appendChild(poople);
 
-    link.textContent = "PokePrep - GitHub";
-    link.href = "https://github.com/logannick02/pokeprep/";
-    link.target = "_blank";
-    link.style.color = "inherit";
-    link.style.textDecoration = "underline";
+    const poopleDescription = document.createElement("p");
+    poopleDescription.textContent =
+        "A Wordle-style web game that I am recreating with the intention of improving the mobile experience.";
+    terminalContent.appendChild(poopleDescription);
 
-    li.appendChild(link);
-    ul.appendChild(li);
+    terminalContent.appendChild(document.createElement("br"));
 
-    terminalContent.appendChild(ul);
+    // PokePrep
+    const pokePrep = document.createElement("p");
+
+    const pokePrepTitle = document.createElement("span");
+    pokePrepTitle.textContent = "PokePrep: ";
+    pokePrepTitle.classList.add("green");
+
+    const pokePrepLink = document.createElement("a");
+    pokePrepLink.textContent = "GitHub";
+    pokePrepLink.href = "https://github.com/logannick02/pokeprep/";
+    pokePrepLink.target = "_blank";
+    pokePrepLink.style.color = "inherit";
+    pokePrepLink.style.textDecoration = "underline";
+
+    pokePrep.appendChild(pokePrepTitle);
+    pokePrep.appendChild(pokePrepLink);
+    terminalContent.appendChild(pokePrep);
+
+    const pokePrepDescription = document.createElement("p");
+    pokePrepDescription.textContent =
+        "A full-stack web application to help Pokemon draft league players prepare for matches.";
+    terminalContent.appendChild(pokePrepDescription);
+
     terminalContent.appendChild(document.createElement("br"));
 }
 
