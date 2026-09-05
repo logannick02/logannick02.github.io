@@ -54,10 +54,10 @@ const resumeSpans = [
 ];
 
 const resumeTextTwo = [
-    "C++/C, JavaScript/TypeScript, HTML/CSS,Rust, C#, Python",
+    "C++/C, JavaScript/TypeScript, HTML/CSS, Rust, C#, Python",
     "Unix, Linux (Kali/Ubuntu), Git/GitHub",
-    "React & Next.js (primarily Next.js)",
-    "Systems Programming, Compiler Design",
+    "React (Vite), Next.js",
+    "Systems Programming, Compiler Design, Frontend Development, Full-Stack Web Development",
 ];
 
 const resumeTextThree = [
@@ -67,7 +67,12 @@ const resumeTextThree = [
 ];
 
 const projectsText = [
-    ""
+    "br",
+    "Poople: https://lcaraway-poople.vercel.app/",
+    "A Wordle-style web game that I am recreating with the intention of improving the mobile experience",
+    "br",
+    "PokePrep:",
+    "A full-stack web application to help Pokemon draft league players prepare for matches."
 ];
 
 function scrollToBottom() {
